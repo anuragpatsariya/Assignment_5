@@ -6,10 +6,6 @@ var express = require("express"),
     random = require("random-js"),
     app;
 
-// Create our Express-powered HTTP server
-// and have it listen on port 3000
-http.createServer(app).listen(3000);
-
 app = express();
 var r = random();
 app.use(bodyParser.json());
@@ -49,3 +45,7 @@ app.post("/flip", function (req, res) {
 app.get("/goodbye", function (req, res) {
     res.send("Goodbye World!");
 });
+
+// Create our Express-powered HTTP server
+// and have it listen on port 3000
+http.createServer(app).listen(3000);
