@@ -9,7 +9,7 @@ var express = require("express"),
 // Create our Express-powered HTTP server
 // and have it listen on port 3000
 app = express();
-r = random();
+var r = random();
 app.use(bodyParser.json());
 http.createServer(app).listen(3000);
 var win_count = 0;
